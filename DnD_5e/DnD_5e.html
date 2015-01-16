@@ -106,6 +106,20 @@
 						<div class="sheet-col-1-6 sheet-center"><button type="roll" class="sheet-core-save" name="roll_Charisma_Save" value="/em attempts a saving throw\n\nCHA save : [[1d20 + @{charisma_save_mod} [Stat Mod and Proficiency] + (@{global_saving_bonus}) [Active Save Bonus] ]] | [[1d20 + @{charisma_save_mod} [Stat Mod and Proficiency] + (@{global_saving_bonus}) [Active Save Bonus] ]]">Save</button></div>
 					</div>
 				
+				<div class="sheet-row">
+						<div class="sheet-col-1-6"><input type="number" name="attr_sanity" min="1" step="1"/></div>
+						<div class="sheet-col-1-6 sheet-core-stat-label">San</div>
+						<div class="sheet-col-1-6"><input type="number" name="attr_sanity_mod" value="(floor((@{sanity}-10)/2))" disabled="disabled"/></div>
+						<div class="sheet-col-1-6 sheet-vert-middle sheet-checkbox-row"><input type="checkbox" name="attr_sanity_save_prof" value="@{PB}" /></div>
+						<div class="sheet-col-1-6"><input type="number" name="attr_sanity_save_mod" value="@{sanity_mod} + @{sanity_save_prof}" disabled="disabled"></div>
+						<div class="sheet-col-1-6 sheet-center"><button type="roll" class="sheet-core-save" name="roll_Sanity_Save" value="/em attempts a saving throw\n\nSAN save : [[1d20 + @{sanity_save_mod} [Stat Mod and Proficiency] + (@{global_saving_bonus}) [Active Save Bonus] ]] | [[1d20 + @{sanity_save_mod} [Stat Mod and Proficiency] + (@{global_saving_bonus}) [Active Save Bonus] ]]">Save</button></div>
+					</div>
+
+				</div>
+				
+				<div class="sheet-col-1-2 sheet-padr">
+
+				
 				</div>
 				
 				<div class="sheet-col-1-2 sheet-padr">
@@ -6307,4 +6321,4 @@
 		<div class="sheet-col-1 sheet-small-label sheet-center">Sheet help - https://wiki.roll20.net/DnD5e_Character_Sheet</div>
 	</div>
 	
-</div>
+</div>
